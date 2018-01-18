@@ -4,4 +4,4 @@ HELLO WORLD!
 
 # GitHub
 
-https://assets-cdn.github.com/images/modules/open_graph/github-octocat.png
+[![octocat.png](https://s26.postimg.org/6828swkeh/octocat.png)](https://postimg.org/image/ve36zqlol/)
