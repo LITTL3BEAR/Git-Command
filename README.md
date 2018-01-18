@@ -6,17 +6,17 @@
 
 $ echo "????" >> [file]
 
-$ git init								: initial github
+$ git init
 
-$ git add [file]						: add file
+$ git add [file]
 
 $ git status
 
 // go to your github directory
 
-$ config --global user.email "????"		: github email
+$ config --global user.email "????"
 
-$ config --global user.name "????"		: github username
+$ config --global user.name "????"
 
 $ git commit -m "????"
 
@@ -24,19 +24,19 @@ $ git remote add origin [url]
 
 $ git remote -v
 
-$ git push -u origin master				: first upload
+$ git push -u origin master
 
 
 # Other Command
 
 
-$ git clone [url]						: clone project
+$ git clone [url]
 
-$ git push								: upload
+$ git push
 
-$ git pull								: download (after clone)
+$ git pull
 
-$ git fetch								: compare
+$ git fetch
 
-$ git add -A							: add all file
+$ git add -A
 
