@@ -36,11 +36,11 @@ $ git reset --soft [file] _____________________________ : discard commit
 ## branch Command
 $ git branch -a _______________________________________ : list branch
 
-$ git branch [???] _____________________________________ : switch to branch [???]
+$ git branch [???] ____________________________________ : create branch
 
-$ git checkout -b [???] ________________________________ : create brance & go to branch
+$ git checkout [???] __________________________________ : switch to branch
 
-$ git checkout master _________________________________ : switch to branch master
+$ git checkout -b [???] _______________________________ : create brance & go to branch
 
 $ git merge --no-ff [???]
 
