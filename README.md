@@ -36,19 +36,21 @@ $ git merge ___________________________________________ : compare
 
 $ git fetch
 
-$ git add -A __________________________________________ : add all
+$ git add . ___________________________________________ : add all
 
 $ git log _____________________________________________ : show all commit
 
 $ git log --oneline
 
-$ git checkout -- [file] ______________________________ : discard edit
+$ git checkout [file] _________________________________ : discard edit
 
 $ git reset HEAD [file] _______________________________ : discard add ??????
 
 $ git reset --soft "HEAD^" ____________________________ : discard top commit
 
 $ git reset --soft [file] _____________________________ : discard commit
+
+$ git rm [file] _______________________________________ : delete file
 
 $ git config --global --unset user.name
 
