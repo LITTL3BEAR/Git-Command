@@ -6,7 +6,7 @@ $ git config --global user.name "your name"
 
 $ git config --global user.email "your email"
 
-$ git config --list
+$ git config --list // แสดง config
 
 
 ## Create
@@ -50,6 +50,8 @@ $ git branch {branch name} // สร้าง branch
 $ git checkout {branch name} // สลับ branch
 
 $ git checkout -b {branch name} // สร้างและสลับ branch
+
+$ git push origin {branch name} // อัพ branch ขึ้น server
 
 $ git merge {branch name} // รวม bracnh กับ master *(ทำใน master)
 
