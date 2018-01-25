@@ -1,10 +1,19 @@
 # GitHub master
 ![octocat.png](https://raw.githubusercontent.com/LITTL3BEAR/foo/master/octocat.png)
 
-## Create Command
-$ echo "????" >> [file] _______________________________ : create file
+## Setup
 
-$ git init ____________________________________________ : initial git
+$ git config --global user.name "YOURNAME"
+
+$ git config --global user.email "your@email.com"
+
+$ git config --list
+
+## Create Command
+
+$ echo "????" >> [file]
+
+$ git init
 
 $ git add [file]
 
@@ -12,9 +21,6 @@ $ git status
 
 // go to your github directory
 
-$ config --global user.email "????"
-
-$ config --global user.name "????"
 
 $ git commit -m "????"
 
