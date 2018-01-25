@@ -1,4 +1,4 @@
-# GitHub
+# GitHub in Feature
 ![octocat.png](https://raw.githubusercontent.com/LITTL3BEAR/foo/master/octocat.png)
 
 ## Setup
