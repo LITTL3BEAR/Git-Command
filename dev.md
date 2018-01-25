@@ -9,9 +9,11 @@
 
 4. echo "your message" >> dev.md
 
-5. git commit -m "your message"
+5. git add .
 
-6. git push origin {branch name} // อัพ branch ขึ้น server
+6. git commit -m "your message"
+
+7. git push origin {branch name} // อัพ branch ขึ้น server
 
 up branch ขึ้น server เสร็จเรียบร้อย ... ตรวจสอบใน github
 
