@@ -13,7 +13,7 @@
 
 6. git push origin {branch name} // อัพ branch ขึ้น server
 
-/* up branch ขึ้น server เสร็จเรียบร้อย ... ตรวจสอบใน github */
+up branch ขึ้น server เสร็จเรียบร้อย ... ตรวจสอบใน github
 
 
 ## Other branch command
