@@ -55,9 +55,11 @@ $ git push origin {branch name} // อัพ branch ขึ้น server
 
 $ git merge {branch name} // รวม bracnh กับ master *(ทำใน master)
 
+$ git checkout {branch name} {file name} // ย้ายไฟล์จาก branch ต้นทาง **(สลับมาอยู่ใน branch ปลายทางก่อน)
+
 $ git branch -d {branch name} // ลบ branch
 
-??? git merge --no-ff {?}
+$ git merge --no-ff {branch name} // รวมไฟล์จาก branch
 
 
 ## Repo
