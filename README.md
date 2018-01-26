@@ -3,6 +3,7 @@
 
 ## Info
 Git cheat sheet (PDF) : https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
+
 Git cheat sheet : https://services.github.com/on-demand/downloads/github-git-cheat-sheet/
 
 ## Setup
