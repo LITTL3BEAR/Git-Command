@@ -1,6 +1,8 @@
 # GitHub
 ![octocat.png](https://raw.githubusercontent.com/LITTL3BEAR/foo/master/octocat.png)
 
+conflict 2
+
 ## Info
 Git cheat sheet (PDF) : https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
 
