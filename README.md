@@ -1,4 +1,7 @@
 # GitHub
+
+conflict 1
+
 ![octocat.png](https://raw.githubusercontent.com/LITTL3BEAR/foo/master/octocat.png)
 
 conflict 2
