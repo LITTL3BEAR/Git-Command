@@ -1,4 +1,7 @@
 # GitHub in Dev
+
+conflict 3
+
 ![octocat.png](https://raw.githubusercontent.com/LITTL3BEAR/foo/master/octocat.png)
 
 ## Setup
