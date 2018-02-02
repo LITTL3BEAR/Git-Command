@@ -19,8 +19,6 @@ up branch ขึ้น server เสร็จเรียบร้อย ... ต
 
 
 ## Other branch command
-$ git merge {branch name} // รวม bracnh กับ master *(ทำใน master)
-
 $ git checkout {branch name} {file name} // ย้ายไฟล์จาก branch ต้นทาง **(สลับมาอยู่ใน branch ปลายทางก่อน)
 
 $ git branch -d {branch name} // ลบ branch
