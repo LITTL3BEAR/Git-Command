@@ -6,7 +6,7 @@ Git cheat sheet (PDF) : https://services.github.com/on-demand/downloads/github-g
 
 Git cheat sheet : https://services.github.com/on-demand/downloads/github-git-cheat-sheet/
 
-สอบ : github วิธีแก้ conflict
+Branch : http://nvie.com/posts/a-successful-git-branching-model/
 
 ## Setup
 $ git config --global user.name "your name"
