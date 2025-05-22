@@ -1,117 +1,121 @@
-# GitHub
-![octocat.png](https://raw.githubusercontent.com/LITTL3BEAR/foo/master/octocat.png)
+# 🐙 GitHub Cheat Sheet
 
-## Info
-Git cheat sheet (PDF) : https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
+![octocat](https://raw.githubusercontent.com/LITTL3BEAR/foo/master/octocat.png)
 
-Git cheat sheet : https://services.github.com/on-demand/downloads/github-git-cheat-sheet/
+เอกสารนี้รวบรวมคำสั่งพื้นฐานที่ใช้บ่อยใน GitHub เพื่อความสะดวกในการใช้งาน
 
-Branch : http://nvie.com/posts/a-successful-git-branching-model/
+---
 
-## Setup
-$ git config --global user.name "your name"
+## ⚙️ Git Setup
 
-$ git config --global user.email "your email"
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+git config --list         # ดู config ทั้งหมด
+```
 
-$ git config --list // แสดง config
+---
 
-## Create
-$ git init // สร้าง .git และ repo เปล่า
+## 📁 Initializing & Creating
 
-$ git status // แสดงสถานะ
+```bash
+git init                         # เริ่มต้น Git repo ใหม่
+git status                       # ตรวจสอบสถานะไฟล์
+echo "hello" >> file.txt         # สร้างไฟล์ใหม่
+git add file.txt                 # เพิ่มไฟล์เข้า staging
+git add .                        # เพิ่มไฟล์ทั้งหมด
+git add '*.txt'                  # เพิ่มเฉพาะไฟล์ .txt
+git commit -m "Your message"     # Commit
+git log                          # ดูประวัติ
+git log --oneline                # ดูประวัติแบบย่อ
+```
 
-$ git echo "your message" >> {your file} // สร้างไฟล์
+---
 
-$ git add {your file}
+## ♻️ Reset & Undo
 
-$ git add . // เพิ่มทั้งหมด
+```bash
+git checkout file.txt            # ยกเลิกการแก้ไขไฟล์
+git reset file.txt               # เอาไฟล์ออกจาก staging
+git reset --soft HEAD~1          # Undo commit ล่าสุด (แต่ไม่ลบไฟล์)
+# git reset --soft HEAD^         # เหมือน HEAD~1
+```
 
-$ git add '*.txt' // เพิ่มแฉพาะสกุลไฟล์
+---
 
-$ git commit -m "your message"
+## 🌿 Branching
 
-$ git log // แสดงการทำงาน
+```bash
+git branch                       # ดู branch ปัจจุบัน
+git branch -a                    # ดูทุก branch (local + remote)
+git branch feature-x             # สร้าง branch ใหม่
+git checkout feature-x           # สลับไป branch
+git checkout -b feature-x        # สร้าง + สลับไป branch ใหม่
+git merge --no-ff feature-x      # รวม branch โดยไม่ fast-forward
+git branch -d feature-x          # ลบ branch local
+git push origin --delete feature-x  # ลบ branch บน remote
+```
 
-$ git log --oneline // แสดงการทำงานแบบย่อ
+> **Tip:**  
+> ต้อง `checkout` มายัง branch ปลายทางก่อน หากจะดึงไฟล์จาก branch อื่น:
 
-$ git log --oneline --decorate --
+```bash
+git checkout main                # อยู่ที่ main ก่อน
+git checkout feature-x file.txt  # ดึงไฟล์จาก feature-x
+```
 
-## Reset
-$ git checkout {file name} // กู้คืนไฟล์
+---
 
-$ git reset {file name} // กู้คืนไฟล์ หลัง add
+## 🌐 Remote Repository
 
-$ git reset --soft HEAD~1 // กู้คืนไฟล์ หลัง commit
+```bash
+git remote add origin <url>      # เชื่อม repo กับ remote
+git remote -v                    # ตรวจสอบ remote ที่เชื่อม
+git push -u origin master        # Push ครั้งแรก
+git push                         # Push ล่าสุด
+git pull                         # ดึงข้อมูลจาก remote
+git fetch                        # ดึงข้อมูลโดยไม่ merge
+git merge origin/master          # merge หลัง fetch
+git clone <url>                  # Clone repo
+```
 
-??? git reset --soft "HEAD^"
+---
 
-??? git reset --soft {file name} 
+## 🏷️ Tagging
 
-## Branch
-$ git branch // ดู branch
+```bash
+git tag v1.0.0                   # สร้าง tag
+git push --tags                  # Push tag ขึ้น remote
+git checkout v1.0.0              # Checkout ที่ tag
+git tag -d v1.0.0                # ลบ tag ใน local
+git push origin --delete v1.0.0  # ลบ tag บน remote
+```
 
-$ git branch -a // ดู branch ทั้งหมด
+---
 
-$ git branch {branch name} // สร้าง branch
+## 🧹 Stash (ซ่อนงานชั่วคราว)
 
-$ git checkout {branch name} // สลับ branch
+```bash
+git stash                        # เก็บงานที่ยังไม่ commit
+git stash pop                    # ดึงงานล่าสุดกลับมา
+```
 
-$ git checkout -b {branch name} // สร้างและสลับ branch
+---
 
-$ git push -u origin {branch name} // อัพ branch ขึ้น server
+## 🔧 File Management
 
-$ git checkout {branch name} {file name} // ย้ายไฟล์จาก branch ต้นทาง **(สลับมาอยู่ใน branch ปลายทางก่อน)
+```bash
+git rm file.txt                  # ลบไฟล์และ stage deletion
+git restore file.txt             # (Git 2.23+) กู้ไฟล์กลับ
+```
 
-$ git branch -d {branch name} // ลบ branch
+---
 
-$ git push origin --delete {branch name} // ลบ branch ใน remote
+## 🔓 Logout (ลบ config ส่วนตัว)
 
-$ git merge --no-ff {branch name} // รวมไฟล์จาก branch
+```bash
+git config --global --unset user.name
+git config --global --unset user.email
+```
 
-## Repo
-$ git remote add origin {your repo url} // remote ไปยัง repo ที่สร้าง
-
-$ git remote -v // ตรวจสอบการ remote
-
-$ git push -u origin master // การส่งถึง github ครั้งแรก
-
-## Tag
-$ git tag {tag name} // การอ้างอิง
-
-$ git push --tags
-
-$ git checkout {tag name} // ย้ายไปยังที่อ้างอิง
-
-$ git tag -d {tag name} // ลบ tag
-
-$ git push origin --delete {tag name} // ลบ tag ใน remote
-
-## Other
-$ git fetch // เปรียบเทียบ
-
-$ git merge origin/master // อัพเดท
-
-$ git pull // การ fetch+merge
-
-$ git push // ส่งขึ้น server
-
-$ git clone {git url}
-
-$ git remote add upstream {git url}
-
-$ git fetch upstream
-
-$ git merge upstream/master
-
-$ git more {file name} // แสดงรายละเอียดไฟล์
-
-$ git rm {file name} // ลบไฟล์
-
-??? git stash
-
-??? git stash pop
-
-## Logout
-$ git config --global --unset user.name
-
-$ git config --global --unset user.email
+---
